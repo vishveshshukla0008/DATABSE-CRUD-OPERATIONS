@@ -1,0 +1,20 @@
+{
+  "name": "10-backend-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishwesh Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.11.0",
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0"
+  }
+}

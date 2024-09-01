@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+.inner-header-btn {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn a , .btn{
+    text-decoration: none;
+    background-color: greenyellow;
+    padding: 8px 10px;
+    border-radius: 0.5rem;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+span {
+    color: greenyellow;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2em auto;
+    background-color: #f9f9f9;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.header-row {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-row {
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.col {
+    flex: 1; /* Flex-grow */
+    min-width: 120px; /* Minimum width to ensure readability */
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;   /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.col:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-show, .btn-edit, .btn-delete {
+    padding: 8px 10px;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    margin: 0 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-show {
+    background-color: yellowgreen;
+}
+
+.btn-edit {
+    background-color: yellow;
+}
+
+.btn-delete {
+    color: white;
+    background-color: red;
+}
+
+/* Responsive design */
+
+/* Medium screens (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin: 1em auto;
+    }
+    .header-row, .data-row {
+        flex-direction: column;
+    }
+    .col {
+        flex: 1 0 100%; /* Full width on medium screens */
+        margin: 0.5em 0;
+    }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        margin: 0.5em auto;
+    }
+    .header-row, .data-row {
+        flex-direction: column;
+    }
+    .col {
+        flex: 1 0 100%; /* Full width on small screens */
+        margin: 0.2em 0;
+        padding: 0.2em;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <link rel="stylesheet" href="/css/delete.css">
+</head>
+
+<body>
+    <!-- Header Inclusion -->
+    <%- include("header.ejs") %>
+
+        <div class="container">
+            <!-- User Card Section -->
+            <div class="user-card">
+                <h3>User Details</h3>
+                <p><strong>Username:</strong>
+                    <%= user.username %>
+                </p>
+                <p><strong>ID:</strong>
+                    <%= user.id %>
+                </p>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Delete Your Account</h2>
+                <form action="http://localhost:8080/users/<%= user.id%>?_method=DELETE"" method="POST" class="delete-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="form-actions">
+                            <button type="submit" class="btn-submit">Delete Account</button>
+                        <a href="/users" class="btn-cancel">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

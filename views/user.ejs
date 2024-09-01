@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.username %></title>
+    <link rel="stylesheet" href="/css/user-details.css">
+</head>
+
+<body>
+    <%- include('header') %>
+    <div class="container">
+        <div class="user-info">
+            <h1>User Information</h1>
+            <div class="user-details">
+                <div class="detail-item">
+                    <b>User ID:</b> <span><%= user.id %></span>
+                </div>
+                <div class="detail-item">
+                    <b>Username:</b> <span><%= user.username %></span>
+                </div>
+                <div class="detail-item">
+                    <b>Email:</b> <span><%= user.email %></span>
+                </div>
+            </div>
+            <div class="actions">
+                <a href="/users/<%= user.id %>/edit" class="btn-edit">Edit</a>
+                <a href="/users" class="btn-back">Back to Users</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(119, 255, 56, 0.904);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.user-info, .edit-section {
+    flex: 1 1 45%; /* Adjust flex basis for better responsiveness */
+    background-color: #fff;
+    padding: 1.5em;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+#user-username {
+    color: black;
+}
+#user-email {
+    color: black;
+}
+
+.user-info h2, .edit-section h2 {
+    color: #00796b;
+    margin-bottom: 1em;
+}
+
+.user-info p, .edit-section p {
+    margin: 0.5em 0;
+}
+
+.user-info strong, .edit-section strong {
+    color: #00796b;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.btn-submit, .btn-cancel {
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    flex: 1 1 auto; /* Allow buttons to grow and shrink */
+    min-width: 120px; /* Minimum width to prevent too small buttons */
+}
+
+.btn-submit {
+    background-color: yellow;
+}
+
+.btn-submit:hover {
+    background-color: yellowgreen;
+}
+
+.btn-cancel {
+    background-color: #e53935;
+}
+
+.btn-cancel:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 1.5em;
+    }
+    
+    .user-info, .edit-section {
+        flex: 1 1 100%; /* Full width on medium screens */
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-submit, .btn-cancel {
+        width: 100%;
+        margin-bottom: 1em;
+        min-width: auto; /* Override min-width to fit screen */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1em;
+    }
+
+    .user-info, .edit-section {
+        padding: 1em;
+    }
+
+    .form-group input {
+        font-size: 0.9em;
+        padding: 0.5em;
+    }
+
+    .btn-submit, .btn-cancel {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/css/edit.css" />
+  </head>
+
+  <body>
+    <%- include("header.ejs") %>
+    <div class="container">
+      <div class="user-info">
+        <h2>User's Information</h2>
+        <p>
+          <strong>Username:</strong>
+          <span id="user-username"><%= user.username %></span>
+        </p>
+        <p>
+          <strong>Email:</strong> <span id="user-email"><%= user.email %></span>
+        </p>
+      </div>
+      <div class="edit-section">
+        <h2>Update Username</h2>
+        <form
+          action="/users/<%= user.id %>?_method=PATCH"
+          method="POST"
+          class="edit-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value="<%= user.username %>"
+              required />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter Password To Change"
+              required />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Update</button>
+            <a href="/users" class="btn-cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

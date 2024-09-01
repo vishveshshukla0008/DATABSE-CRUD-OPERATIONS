@@ -1,0 +1,113 @@
+/* General reset and body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* User info section */
+.user-info {
+    padding: 20px;
+}
+
+.user-info h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* User details styling */
+.user-details {
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.detail-item b {
+    font-weight: bold;
+}
+
+/* Status styling */
+.status-active {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Action buttons */
+.actions {
+    margin-top: 20px;
+}
+
+.btn-edit,
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #007bff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-back {
+    background-color: #6c757d;
+}
+
+.btn-back:hover {
+    background-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .user-info h1 {
+        font-size: 20px;
+    }
+
+    .detail-item {
+        font-size: 14px;
+    }
+
+    .actions {
+        text-align: center;
+    }
+
+    .btn-edit,
+    .btn-back {
+        display: block;
+        margin: 10px auto;
+        width: calc(100% - 20px);
+        text-align: center;
+    }
+}

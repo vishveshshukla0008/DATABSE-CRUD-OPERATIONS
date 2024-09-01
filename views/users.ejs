@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database APIs</title>
+    <link rel="stylesheet" href="css/users.css">
+</head>
+
+<body>
+    <%- include('header') %>
+        <div class="container">
+            <div class="top">
+                <div class="count">Total Users in Database : <%= result.length %>
+                </div>
+                <div>
+                <form method="GET" action="http://localhost:8080/user/new/">
+                    <button class="btn">Add New User</button>
+                  </form></div>
+                <div class="btn"><a href="../">Go Back</a></div>
+            </div>
+            <div class="header-row">
+                <div class="col col1"><b>Users ID</b></div>
+                <div class="col col2"><b>USERNAME</b></div>
+                <div class="col col3"><b>EMAIL</b></div>
+                <div class="col col4"><b>Operations</b></div>
+            </div>
+            <% for(let i=0; i<result.length; i++) { %>
+                <div class="data-row">
+                    <div class="col col1">
+                        <%= result[i].id %>
+                    </div>
+                    <div class="col col2">
+                        <%= result[i].username %>
+                    </div>
+                    <div class="col col3">
+                        <%= result[i].email %>
+                    </div>
+                    <div class="col col4">
+                        <form action="http://localhost:8080/users/<%= result[i].id %>">
+                            <button class="btn-show">Show</button>
+                        </form>
+                        <form action="http://localhost:8080/users/<%= result[i].id %>/edit/">
+                            <button class="btn-edit">Edit</button>
+                        </form>
+                        <form action="http://localhost:8080/users/<%= result[i].id %>/delete">
+                            <button class="btn-delete">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+                    <!-- Add more data rows here -->
+        </div>
+</body>
+
+</html>
